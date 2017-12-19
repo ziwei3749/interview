@@ -4,23 +4,40 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        .brother1 {
-            width: 100px;
-            height: 100px;
-            background: blue;
-            margin-bottom: 60px;
-        }
-
-        .brother2 {
-            margin-top: 40px;
-            width: 100px;
-            height: 100px;
-            background: red;
+        li {
+            height: 30px;
+            border: 1px solid #ccc;
         }
     </style>
 </head>
-<body>
-    <div class="brother1"></div>
-    <div class="brother2"></div>
+<body style="height:100%">
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+</ul>
+<script>
+
+    //    let liList = document.querySelectorAll('li')
+    //    for (var i = 0; i < liList.length; i++) {
+    //
+    //        liList[i].onclick = function () {
+    //            console.log(i)
+    //        }
+    //    }
+
+
+    var elements = document.getElementsByTagName('li');
+    var length = elements.length;
+    var handler = function (i) {
+        return function () {
+            alert(i);
+        }
+    }
+    for (var i = 0; i < length; i++) {
+        elements[i].onclick = handler(i);
+    }
+</script>
 </body>
 </html>
