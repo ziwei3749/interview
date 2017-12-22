@@ -84,10 +84,7 @@ margin padding border
 
 - 7.position常见的几种定位方式,以及区别
 
- position: static 
- position:absolute : 脱离文档流,相对于父元素定位
- position:relative : 不脱离文档流, 相对于自己本身的位置定位
- position:fixed  : 脱离文档流, 相对于body定位
+
  
 - 8.如何让文本垂直居中,如何高度不确定呢? 
  
@@ -149,7 +146,7 @@ margin padding border
  ES5: Array.prototype.slice.call('arguments')
  ES6: Array.from('arguments')
         
-- 6.单线程的js是如何通过eventloop机制,说出代码的执行顺序
+- 6.单线程的js的通过eventloop机制实现的异步,试着说出代码的执行顺序
 
 ```
     console.log(1)
@@ -200,4 +197,25 @@ margin padding border
     return false
 
 - 9.前后端开发过程中,出现错误时,一般你如何检查这个错误是否属于前端。
+
+- 10.HTTP状态码 谈谈对304 400 403 404 500的含义
+
+- 11.cookie和localStorage/sessionStorage的区别
+
+- 12.什么是浏览器的同源安全策略
+
+## Vue
+
+- 说出你所使用过的vue指令, v-show和v-if有什么区别
+
+- 父子组件通信的几种方式
+
+- 请说下封装 vue 组件的过程？
+
+- 请说下具体使用vue的理解？你觉得哪些项目适合vue框架？
+
+## 代码
+
+- 实现一个函数fn,该函数有一个参数n(数字类型),其返回值是一个数组。数组内是n个随机不重复的整数,且整数取值范围是[2,32]
+
  
