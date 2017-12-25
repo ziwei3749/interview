@@ -13,11 +13,11 @@ img / input / a
 div / h1 / p / header / main / footer / ul / tr / td 
 ```
 
-- 3.浮动的表现,以及常见的闭合浮动的方式,简单说说他们能清除浮动的原理
+- 3.清楚浮动的方式有哪些
 
 - 4.盒模型由什么哪些组成? 
 
-margin padding border
+
 
 - 5.解释什么是外边距合并现象 (或者看代码回答,给brother2元素添加margin-top:60px后会发生什么)
 
@@ -84,15 +84,19 @@ margin padding border
 
 - 7.position常见的几种定位方式,以及区别
 
-
  
-- 8.如何让文本垂直居中,如何高度不确定呢? 
+- 8.如何让一个div水平垂直居中,请写出代码。
  
-- 9.实现图中的布局,容器高度不确定的情况下,如何让中间content自适应
+- 9.说说rem和em和px几个单位的区别 
+ 
+ 
+- 10.实现图中的布局,容器高度不确定的情况下,如何让中间content自适应
  
  <img src="./css.png">
  
- ## JS
+ 
+ 
+ ## JS基础
  
  - 1.'=='和'==='的区别
  
@@ -111,7 +115,7 @@ margin padding border
  
  ```
  
- 函数声明提升优于变量声明提升:
+
  ```
     var a;
      function a() {} 
@@ -135,46 +139,24 @@ margin padding border
  
  - 4.如何改变this的指向?
  
- 通过call / apply / bind
- 
- call 、 apply返回的是对原函数的调用结果。参数的话,第一个是this,后面是原函数的参数
- bind 返回是是一个函数。函数体和原来的函数一样, bind的参进去的参数就是这个函数里的this
  
  
  - 5.你知道哪些把伪数组变成数组的方法?
  
- ES5: Array.prototype.slice.call('arguments')
- ES6: Array.from('arguments')
+
         
-- 6.单线程的js的通过eventloop机制实现的异步,试着说出代码的执行顺序
+- 6.单线程的js的通过eventloop机制实现的异步,试着说出代码的执行结果
 
 ```
-    console.log(1)
-    
-    setTimeout(function(){
-        console.log(2)
-    },0)
+var t = true;
 
-    console.log(3)
-    
+window.setTimeout(function (){
+    t = false;
+},1000);
 
-```
+while (t){}
 
-```
- setTimeout(function(){
-     console.log('定时器开始啦')
- });
- 
- new Promise(function(resolve){
-     console.log('马上执行for循环啦');
-     for(var i = 0; i < 10000; i++){
-         i == 99 && resolve();
-     }
- }).then(function(){
-     console.log('执行then函数啦')
- });
- 
- console.log('代码执行结束');
+alert('end');
     
 
 ```
@@ -190,23 +172,25 @@ margin padding border
     }
  
  ````
- 
-- 8.如何阻止事件冒泡和默认事件
- 
-    stopPropagation
-    return false
 
 - 9.前后端开发过程中,出现错误时,一般你如何检查这个错误是否属于前端。
 
-- 10.HTTP状态码 谈谈对304 400 403 404 500的含义
+- 10.HTTP状态码 谈谈对200 304 400 403 404 500的含义
 
 - 11.cookie和localStorage/sessionStorage的区别
 
 - 12.什么是浏览器的同源安全策略
 
-## Vue
+- 13.实现一个函数fn,该函数有一个参数n(数字类型),其返回值是一个数组。数组内是n个随机不重复的整数,且整数取值范围是[2,32]
+
+
+## Vue加分题 (选做,如果没用过Vue的话)
 
 - 说出你所使用过的vue指令, v-show和v-if有什么区别
+
+- Vue.set一般在什么场景下使用,是用来干嘛的
+
+- created和mounted生命周期钩子的区别
 
 - 父子组件通信的几种方式
 
@@ -214,8 +198,6 @@ margin padding border
 
 - 请说下具体使用vue的理解？你觉得哪些项目适合vue框架？
 
-## 代码
 
-- 实现一个函数fn,该函数有一个参数n(数字类型),其返回值是一个数组。数组内是n个随机不重复的整数,且整数取值范围是[2,32]
 
  
